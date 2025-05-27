@@ -11,7 +11,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-cash-register"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">POS Codekop<sup></sup></div>
+        <div class="sidebar-brand-text mx-3">CAFE 808<sup></sup></div>
     </a>
 
     <!-- Divider -->
@@ -40,7 +40,7 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <!-- <h6 class="collapse-header">Custom Components:</h6> -->
-                <a class="collapse-item" href="index.php?page=barang">Barang</a>
+                <a class="collapse-item" href="index.php?page=produk">Produk</a>
                 <a class="collapse-item" href="index.php?page=kategori">Kategori</a>
                 <!-- <a class="collapse-item" href="index.php?page=user">User</a> -->
             </div>

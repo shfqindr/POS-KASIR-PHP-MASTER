@@ -45,13 +45,24 @@ class view
         }
     }
 
-    public function produk()
-    {
-        $sql = "SELECT * FROM produk ORDER BY id_produk DESC";
-        $row = $this->db->prepare($sql);
-        $row->execute();
-        return $row->fetchAll();
-    }
+ public function produk()
+{
+    $sql = "SELECT 
+                produk.id_produk,
+                kategori.nama_kategori,
+                produk.nama_produk,
+                produk.harga_jual,
+                produk.satuan
+            FROM 
+                produk
+            INNER JOIN 
+                kategori ON produk.id_kategori = kategori.id_kategori
+            ORDER BY 
+                produk.id_produk ASC";  // ubah ke ASC sesuai permintaan
+    $row = $this->db->prepare($sql);
+    $row->execute();
+    return $row->fetchAll();
+}
 
     public function produk_cari($cari)
     {
@@ -65,7 +76,7 @@ class view
 
     public function produk_id()
     {
-        $sql = "SELECT id_produk FROM produk ORDER BY id_produk DESC LIMIT 1";
+        $sql = "SELECT id_produk FROM produk ORDER BY id_produk ASC LIMIT 1";
         $row = $this->db->prepare($sql);
         $row->execute();
         $hasil = $row->fetch();

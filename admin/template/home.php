@@ -8,12 +8,12 @@
     $result_terjual = $row->fetch(PDO::FETCH_ASSOC);
     $total_terjual = $result_terjual['total_terjual'];
 
-    // Menghitung jumlah kategori
-    $sql = "SELECT COUNT(id_kategori) AS total_kategori FROM kategori";
+    // Menghitung jumlah produk
+    $sql = "SELECT COUNT(id_produk) AS total_produk FROM produk";
     $row = $config->prepare($sql);
     $row->execute();
-    $result_kategori = $row->fetch(PDO::FETCH_ASSOC);
-    $total_kategori = $result_kategori['total_kategori'];
+    $result_produk = $row->fetch(PDO::FETCH_ASSOC);
+    $total_produk = $result_produk['total_produk'];
 ?>
 
 <div class="row">
@@ -39,15 +39,15 @@
     <div class="col-md-3 mb-3">
         <div class="card">
             <div class="card-header bg-primary text-white">
-                <h6 class="pt-2"><i class="fas fa-bookmark"></i> Kategori Barang</h6>
+                <h6 class="pt-2"><i class="fas fa-bookmark"></i> Total Produk</h6>
             </div>
             <div class="card-body">
                 <center>
-                    <h1><?php echo number_format($total_kategori); ?></h1>
+                    <h1><?php echo number_format($total_produk); ?></h1>
                 </center>
             </div>
             <div class="card-footer">
-                <a href='index.php?page=kategori'>Tabel Kategori <i class='fa fa-angle-double-right'></i></a>
+                <a href='index.php?page=produk'>Tabel Produk <i class='fa fa-angle-double-right'></i></a>
             </div>
         </div>
         <!--/grey-card -->
